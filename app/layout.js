@@ -11,8 +11,7 @@ export const metadata = {
   title: "School Management System",
   description: "Experience an Amazing school management system with all tools and data required to manage a school",
   icons:{
-    icon:"assets/icons/cover.png"
-  }
+    icons:"/public/assets/images/school.png"}
 };
 
 export default function RootLayout({ children }) {

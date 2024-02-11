@@ -19,7 +19,7 @@ export const  MenuData = [
         list:[
             {
                 title:"manage class",
-                path:"/class",
+                path:"schoolmgt/class",
                 icons: <MdDashboard />
                 
             },
@@ -124,7 +124,7 @@ export const secondData = [
     
     {
         title:"Teacher",
-        path:"/",
+        path:"/schoolmgt/teacher",
         icons: <MdDashboard />
     },
 

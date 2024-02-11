@@ -7,7 +7,7 @@ import { secondData } from '../Data';
 
 const SideBar = () => {
   return (
-    <section className=" max-h-screen">
+    <section className="">
         <div className="text-black border-b-2 border-b-black flex justify-between items-center pb-3 ">
         <Image src="/assets/images/school.png" width={50} height={30} />
         <FaBars size={30} className="text-white"/>
