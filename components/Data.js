@@ -1,142 +1,98 @@
-import { 
-    MdAnalytics, 
-    MdAttachMoney,
-    MdDashboard, 
-    MdHelpCenter, 
-    MdOutlineSettings,
-    MdPeople,
-    MdShoppingBag,
-    MdSupervisedUserCircle, 
-    MdWork 
-} from "react-icons/md"
+
+import { GiTeacher } from "react-icons/gi";
+import { FaSchoolFlag } from "react-icons/fa6";
+import { MdOutlineSubject } from "react-icons/md";
+import { PiExamDuotone } from "react-icons/pi";
+import { MdFamilyRestroom } from "react-icons/md";
+import { GiRadarCrossSection } from "react-icons/gi";
 
 
-export const  MenuData = [
-
+export const dataset=[
     {
-        title:'class',
-        icons: <MdDashboard />,
-        list:[
-            {
-                title:"manage class",
-                path:"schoolmgt/class",
-                icons: <MdDashboard />
-                
-            },
-            {
-                title:"manage section",
-                path:"/class/section",
-                icons: <MdDashboard />
-            },
-        ]
+      path:"/schoolmgt/class",
+      title:" classes"  
     },
-
     {
-        title:'subject',
-        icons: <MdDashboard />,
-        list:[
-            {
-                title:"class Class-1",
-                path:"/class/",
-                icons: <MdDashboard />
-              
-            },
-            {
-                title:"class Class-2",
-                path:"/class/",
-                icons: <MdDashboard />
-                
-            },
+        path:"/schoolmgt/class/add-class",
+        title:" Add classes"  
+      },
+      {
+        path:"/schoolmgt/class/edit",
+        title:" Edit classes"  
+      }
+]
 
-            {
-                title:"class Class-3",
-                path:"/class/",
-                icons: <MdDashboard />
-                
-            },
-
-            {
-                title:"class Class-4",
-                path:"/class/",
-                icons: <MdDashboard />
-                
-            },
-        ]
-    },
-
+export const studentset=[
     {
-        title:'student section',
-        icons: <MdDashboard />,
-        list:[
-            {
-                title:"Academic section",
-                path:"/class",
-                icons: <MdDashboard />
-               
-            },
-            {
-                title:"Admit student",
-                path:"/class/section",
-            },
-
-            {
-                title:"Student information",
-                path:"/class/section",
-            },
-        ]
+      path:"/schoolmgt/student",
+      title:"Student"  
     },
-
     {
-        title:'Exam section',
-        icons: <MdDashboard />,
-        list:[
-            {
-                title:"Exam list",
-                path:"/class",
-                icons: <MdDashboard />
-               
-            },
-            {
-                title:"Exam grade",
-                path:"/class/section",
-                icons: <MdDashboard />
-            },
+        path:"/schoolmgt/class/add-student",
+        title:" Admit student"  
+      },
+      {
+        path:`/schoolmgt/student/$/`,
+        title:" Student profile "  
+      },
 
-            {
-                title:"Manage Mark",
-                path:"/class/section",
-                icons: <MdDashboard />
-            },
-        ]
-    },
-
-
+      {
+        path:`/schoolmgt/class/$/edit`,
+        title:" Edit student profile "  
+      },
+      
 ]
 
 
 
+
 export const secondData = [
-    {
-        title:"Dashboard",
-        path:"/schoolmgt",
-        icons: <MdDashboard />
-    },
     
     {
         title:"Teacher",
         path:"/schoolmgt/teacher",
-        icons: <MdDashboard />
+        icons: <GiTeacher />,
+        contain:[
+            // {Pname:"add-teacher" , Name:"Add Teacher"}
+        ]
+    },
+
+
+
+    {
+        title:"Subject",
+        path:"/schoolmgt/subject",
+        icons: <MdOutlineSubject />,
+        contain:[
+            
+        ]
     },
 
     {
-        title:"Class routine ",
-        path:"/",
-        icons: <MdDashboard />
+        title:"Exam Section",
+        path:"/schoolmgt/exams",
+        icons: <PiExamDuotone />,
+        contain:[
+            
+        ]
+
     },
 
     {
         title:"Parent",
-        path:"/",
-        icons: <MdDashboard />
+        path:"/schoolmgt/parent",
+        icons: <MdFamilyRestroom />,
+        contain:[
+            
+        ]
+    },
+
+    {
+        title:"Section",
+        path:"/schoolmgt/section",
+        icons: <GiRadarCrossSection />,
+        contain:[
+            
+        ]
     },
 ]

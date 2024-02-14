@@ -1,27 +1,31 @@
+import { ClassUpdate } from '@/lib/actions/class.action.model'
 import React from 'react'
-import { IoAddCircleOutline } from "react-icons/io5" 
+import { IoAddCircleOutline } from 'react-icons/io5'
 
-function ClassForm({Teacher,handleAdd}) {
+const ClassUpdateForm = ({content, Teacher}) => {
   return (
-    <section>
-         <form className="flex flex-col px-20 border" action={handleAdd}>
+    <div>
+        <form className="flex flex-col px-20 border" action={ClassUpdate}>
+            
+            <input type="hidden" name="id" value={content._id} />
+
             <label className="text-center text-sm text-gray-500 py-2" >School Management System--- Classes</label>
-            <span className="flex items-center gap-2 my-2 border py-2 px-2"><IoAddCircleOutline  className="text-gray-500" size={20}/>Add Classes</span>
+            <span className="flex items-center gap-2 my-2 border py-2 px-2"><IoAddCircleOutline  className="text-gray-500" size={20}/>Edit Class</span>
             <div className="border">
             <span className="flex justify-center items-center border px-2 text-center gap-3 py-5">
                     <label className="text-sm font-medium">Name</label>
-                    <input type="text" placeholder='' name="Name" className="bg-primary text-black border rounded-md px-3 w-96 my-1 h-10 outline-none" />
+                    <input type="text" placeholder={content.name} name="name" className="bg-primary text-black border rounded-md px-3 w-96 my-1 h-10 outline-none" />
                 </span>
 
                 <span className="flex justify-center items-center border px-2 text-center gap-3 py-5">
                     <label className="text-sm font-medium">Numeric Id</label>
-                    <input type="text" placeholder=''  className="bg-primary text-black border rounded-md px-3 w-96 my-1 h-10 outline-none" name='number'/>
+                    <input type="text" placeholder={content.numericId}  className="bg-primary text-black border rounded-md px-3 w-96 my-1 h-10 outline-none" name='numericId'/>
                 </span>
                 
                 <span className="flex justify-center items-center border px-2 text-center gap-3 py-5">
                     <label className="text-sm font-medium">Assigned Teachers</label>
                     <select name="assignedTeacher" id="" className="bg-primary text-black border rounded-md px-3 w-96 my-1 h-10 outline-none">
-                        <option>choose class teacher</option>
+                        <option>{content.assignedTeacher.name}</option>
                         {Teacher.map((data) =>(
                             <option key={data._id} value={data._id}>{data.name}</option>
                         ))}
@@ -33,8 +37,8 @@ function ClassForm({Teacher,handleAdd}) {
                 </div>
             </div>     
         </form>
-    </section>
+    </div>
   )
 }
+export default ClassUpdateForm
 
-export default ClassForm

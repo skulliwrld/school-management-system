@@ -1,7 +1,8 @@
 import {Schema , model, models} from "mongoose"
 const classSchema = new Schema({
     assignedTeacher:{
-        type:String,
+        type:Schema.Types.ObjectId,
+        ref:'Teacher',
     },
     name:{
         type:String,  

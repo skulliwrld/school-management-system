@@ -1,0 +1,11 @@
+tbody tr td{
+    border: 1px solid gainsboro;
+    padding:15px 6px;
+    text-align: center;
+}
+
+thead tr td{
+    border: 1px solid gainsboro;
+    padding:6px 6px;
+    text-align: center;
+}
