@@ -17,10 +17,10 @@ import { deleteClass } from '@/lib/actions/class.action.model';
 const ClassTable = ({Data}) => {
    // const teachers = Array[Data.assignedTeacher]
   return (
-    <div className="w-full">
+    <div className="text-black bg-gradient-to-r from-yellow-400 to-pink-600  py-4 px-5 w-full h-auto">
         <table className="w-full px-2 mt-3  border">
             <thead className="border py-3">
-                <tr className="text-md font-medium text-slate-500">
+                <tr className="text-md font-medium text-slate-900">
                     <td className=''>s/n</td>
                     <td className="">Class Name</td>
                     <td>Numeric Name</td> 
@@ -49,7 +49,7 @@ const ClassTable = ({Data}) => {
                         <DropdownMenu>
                             <DropdownMenuTrigger className="bg-blue-500 py-3 px-2 text-primary text">Action</DropdownMenuTrigger>
                             <DropdownMenuContent className="bg-blue-300 text-primary border border-black flex flex-col justify-center text-center">
-                                <Link href={`schoolmgt/class/${data._id}`}>
+                                <Link href={`/class/${data._id}`}>
                                     <DropdownMenuLabel className="bg-green-600 py-2 px-3 font-semibold rounded-lg text-end cursor-pointer">Edit</DropdownMenuLabel>
                                 </Link>
                                 <DropdownMenuSeparator />

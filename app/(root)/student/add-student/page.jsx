@@ -1,6 +1,7 @@
 import { AllTeachersFetch } from '@/lib/DataFech/All-data';
 import ClassForm from "@/components/common-components/ClassForm";
 import { addClass } from '@/lib/actions/class.action.model'
+import StudentForm from '@/components/common-components/StudentForm';
 
 
 
@@ -11,8 +12,8 @@ const AddClasses = async () => {
     
   return (
     <section className="w-full bg-primary outline-none border">
-        <ClassForm handleAdd={addClass} Teacher={JSON.parse(JSON.stringify(teachers))} />
-    </section>
+        <StudentForm handleAdd={addClass} />
+        </section>
   )
 }
 

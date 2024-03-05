@@ -7,7 +7,7 @@ const ClassRoutine = async() => {
   const classess = await AllClassFetch()
   return (
     <section>
-       <UserComponent />
+       <UserComponent title="Class Routine" path={"/classroutine/add-classsroutine"} />
        <Linkk title={"classroutine"} items={JSON.parse(JSON.stringify(classess))}/>
     </section>
   )

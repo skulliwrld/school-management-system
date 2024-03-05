@@ -6,7 +6,7 @@ import { Button } from '../ui/button'
 import { FaRegArrowAltCircleRight } from 'react-icons/fa'
 
 
-const UserComponent = () => {
+const UserComponent = ({title, path}) => {
   return (
     <>
     <section className="flex justify-between items-center w-full border-b p-3 text-sm">
@@ -24,10 +24,10 @@ const UserComponent = () => {
     <div className="py-4 flex px-3 items-center justify-between border">
         <div className="flex items-center space-x-4 mt-2">
             <FaRegArrowAltCircleRight className="text-xl" />
-            <h2 className=" text-xl">Manage Class Routine</h2>
+            <h2 className=" text-xl">Manage {title}</h2>
         </div>
         <Button className="bg-purple-700 text-primary hover:bg-gray-700" >
-           <Link href="/classroutine/add-classroutine" className="flex items-center gap-2"><FaRegArrowAltCircleRight size={15} />Add New Class Routine</Link> 
+           <Link href={path} className="flex items-center gap-2"><FaRegArrowAltCircleRight size={15} />Add New {title}</Link> 
         </Button>   
     </div>
     </>

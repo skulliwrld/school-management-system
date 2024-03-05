@@ -15,11 +15,13 @@ import { IoIosArrowDown } from "react-icons/io";
 import { VscDashboard } from "react-icons/vsc";
 import { PiStudentFill } from "react-icons/pi";
 import { MdKeyboardArrowUp } from "react-icons/md";
+import NavSpecial from './NavSpecial';
+
 
 const SideBar = () => {
     const [tab, setTab]= useState(false)
     const [tab2, setTab2]= useState(false)
-
+    const [tab3, setTab3]= useState(false)
 
     const handleTabChange = () =>{
         setTab(!tab)
@@ -29,10 +31,11 @@ const SideBar = () => {
         setTab2(!tab2)
     }
 
-
-    const pathName = usePathname()
-
+    const handleTabChange3 = () =>{
+        setTab3(!tab3)
+    }
     
+    const pathName = usePathname()
   return (
     <section className="h-full">
         <div className="text-black border-b-2 border-b-black flex justify-between items-center pb-3 ">
@@ -52,7 +55,7 @@ const SideBar = () => {
         </div>
         {/* DROP DOWN NAVS */}
         <div className="pt-3 w-full text-black pl-1  my-1">
-            <div className={`flex flex-col justify-start items-start bg-inherit  font-normal space-x-3 text:sm rounded-full rounded-l-none ${pathName === "/schoolmgt/class" && ' rounded-full rounded-l-none '}`}>
+            <div className={`flex flex-col justify-start items-start bg-inherit  font-normal space-x-3 text:sm rounded-full rounded-l-none ${pathName === "/class" && ' rounded-full rounded-l-none '}`}>
                 <div className="flex gap-3" onClick={handleTabChange}>
                     <i className="text-sm list-none list-item "><FaSchoolFlag className='' /></i>
                     <span className="text-xs flex gap-3 items-center">Class {tab?<MdKeyboardArrowUp/>:< IoIosArrowDown/>}</span>
@@ -67,7 +70,7 @@ const SideBar = () => {
         </div>
 
         <div className="pt-3 w-full text-black pl-1 my-3">
-            <div className={`flex flex-col justify-start items-start bg-inherit  font-normal space-x-3 text:sm rounded-full rounded-l-none ${pathName === "/schoolmgt/student" && ' rounded-full rounded-l-none '}`}>
+            <div className={`flex flex-col justify-start items-start bg-inherit  font-normal space-x-3 text:sm rounded-full rounded-l-none ${pathName === "/student" && ' rounded-full rounded-l-none'}`}>
                 <div className="flex gap-3" onClick={handleTabChange2}>
                     <i className="text-sm list-none list-item "><PiStudentFill className='' /></i>
                     <span className="text-xs flex gap-3 items-center">Student {tab2?<MdKeyboardArrowUp/>:< IoIosArrowDown/>} </span>
@@ -80,6 +83,9 @@ const SideBar = () => {
                 </div> 
             </div>
         </div>
+{/* 
+        <NavSpecial tab3={tab3} handleTabChange3={handleTabChange3}/> */}
+
 
         {/*MAPPED NAVS  */}
         <div className="mt-2 overflow-auto">

@@ -3,9 +3,9 @@ import Link from 'next/link'
 
 const Linkk = ({items,title}) => {
   return (
-    <div className='border flex flex-col py-10 px-10 items-center bg-slate-100 mx-1 w-full'>
-        <h1 className="text-3xl">
-            welcome to {title} Fieds For All the class in scchool
+    <div className='border flex flex-col py-10 px-5 items-center bg-slate-100 mx-1 w-full'>
+        <h1 className="text-2xl text-center text-yellow-900 uppercase">
+            Welcome to {title} Fieds For All the class in school
         </h1>
         <div>
             <table className="w-full bg-slate-100">

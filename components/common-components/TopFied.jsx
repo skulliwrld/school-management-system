@@ -8,6 +8,8 @@ import { MdSearch } from 'react-icons/md';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useDebouncedCallback } from 'use-debounce'
 
+
+
 function TopFied({title, path}) {
   const searchParams = useSearchParams();
   const {replace} = useRouter()
@@ -40,6 +42,11 @@ function TopFied({title, path}) {
            <Button className="bg-purple-700 text-primary hover:bg-gray-700" >
            <Link href={path} className="flex items-center gap-2"><FaRegArrowAltCircleRight size={15} />Add New {title}</Link> 
         </Button>   
+
+       
+
+
+
         </div>
     </section>
   )

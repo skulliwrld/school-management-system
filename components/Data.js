@@ -6,40 +6,46 @@ import { PiExamDuotone } from "react-icons/pi";
 import { MdFamilyRestroom } from "react-icons/md";
 import { GiRadarCrossSection } from "react-icons/gi";
 
-
 export const dataset=[
     {
-      path:"/schoolmgt/class",
+      path:"/class",
       title:" classes"  
     },
     {
-        path:"/schoolmgt/class/add-class",
+        path:"/class/add-class",
         title:" Add classes"  
       },
       {
-        path:"/schoolmgt/class/edit",
+        path:"/class/edit",
         title:" Edit classes"  
+      },
+      {
+        path:"/class/manage-section",
+        title:" Manage section"  
       }
 ]
 
+
+
+
 export const studentset=[
     {
-      path:"/schoolmgt/student",
+      path:"/student",
       title:"Student"  
     },
     {
-        path:"/schoolmgt/class/add-student",
+        path:"/class/add-student",
         title:" Admit student"  
       },
       {
-        path:`/schoolmgt/student/$/`,
-        title:" Student profile "  
+        path:`/academic section/`,
+        title:" student/section "  
       },
 
-      {
-        path:`/schoolmgt/class/$/edit`,
-        title:" Edit student profile "  
-      },
+      // {
+      //   path:`/class/$/edit`,
+      //   title:" Edit student profile "  
+      // },
       
 ]
 
@@ -50,7 +56,7 @@ export const secondData = [
     
     {
         title:"Teacher",
-        path:"/schoolmgt/teacher",
+        path:"/teacher",
         icons: <GiTeacher />,
         contain:[
             // {Pname:"add-teacher" , Name:"Add Teacher"}
@@ -61,7 +67,7 @@ export const secondData = [
 
     {
         title:"Subject",
-        path:"/schoolmgt/subject",
+        path:"/subject",
         icons: <MdOutlineSubject />,
         contain:[
             
@@ -69,8 +75,17 @@ export const secondData = [
     },
 
     {
+      title:"Class Routine",
+      path:"/classroutine",
+      icons: <MdFamilyRestroom />,
+      contain:[
+          
+      ]
+  },
+
+    {
         title:"Exam Section",
-        path:"/schoolmgt/exams",
+        path:"/exams",
         icons: <PiExamDuotone />,
         contain:[
             
@@ -80,7 +95,7 @@ export const secondData = [
 
     {
         title:"Parent",
-        path:"/schoolmgt/parent",
+        path:"/parent",
         icons: <MdFamilyRestroom />,
         contain:[
             
@@ -89,7 +104,7 @@ export const secondData = [
 
     {
         title:"Section",
-        path:"/schoolmgt/section",
+        path:"/section",
         icons: <GiRadarCrossSection />,
         contain:[
             

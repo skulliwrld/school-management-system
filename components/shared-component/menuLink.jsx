@@ -45,7 +45,6 @@ export function SecondLink({items}) {
     <div className="border-warmGray-100 ">
         <Link href={items.path} className={`flex font-normal space-x-3 text:sm py-3 items-center hover:bg-secondary-200 rounded-full rounded-l-none ${pathName === items.path && 'bg-purple-600 rounded-full rounded-l-none border text-white '}`}>
             <i className="text-sm items-center flex gap-2"><MdOutlineStarRate/><span className="text-xs"> {items.title}</span></i>
-            
         </Link>
     </div>
   )
